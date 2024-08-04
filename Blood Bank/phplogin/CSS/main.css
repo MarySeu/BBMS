@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 500px;
+    background: #fff;
+    border: 1px solid #ccc;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+    overflow: hidden;
+    height: auto; /* Makes the login container take the full height of the viewport */
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: center; */
+}
+
+.header {
+    background: #fff;
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.header h1 {
+    color: red;
+    font-size: 36px;
+    margin: 0;
+}
+
+.login-box {
+    padding: 15px;
+    text-align: center;
+    background-image: url("../images/pawel-czerwinski-DNC3cXM0lMU-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.login-box h2 {
+    color: #000;
+    margin: 0 0 20px;
+    font-size: 28px;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.options label {
+    font-size: 14px;
+}
+
+.options a {
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+}
+.login-box .btn{
+    text-align: center;
+}
+
+.login-box button {
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background: red;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.login-box button a{
+    text-decoration: none;
+    color: #000;
+}
+.login-box button:hover {
+    background: #e60000;
+}
+
+.login-box p {
+    margin-top: 1rem;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-box p a {
+    color: black;
+    text-decoration: none;
+}
+
+.login-box p a:hover {
+    text-decoration: underline;
+}

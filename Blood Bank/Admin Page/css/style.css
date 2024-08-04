@@ -1,0 +1,268 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+}
+.promo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:red;
+    cursor: pointer;
+    color: white;
+}
+.promo-content{
+    text-align: center;
+}
+.cancel-symbol{
+    text-decoration: none; 
+    color: white;
+    font-size: 20px;
+    vertical-align: middle;
+}
+.cancel-symbol:hover{
+    cursor: pointer;
+}
+
+nav{
+    background: white;
+    width: 100%;
+    padding: 8px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 0.3px solid black;
+
+}
+.logo{
+    color: red;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+nav ul li{
+    margin: 2px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+nav ul li a{
+    color: black;;
+    padding: 10px 20px;
+    /* text-transform: uppercase; */
+    letter-spacing: 1.2;
+    cursor: pointer;
+}
+
+.nav i {
+    /* font-size: 20px; */
+    margin-left: 10px;
+}
+
+.dashboard {
+    text-align: center;
+
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+.cards {
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    text-align: center;
+
+}
+
+.card {
+    width: 340px;
+    height: 166px;
+    flex-shrink: 0;
+    text-align: left;
+
+}
+
+.card h2 {
+    width: 208px;
+    height: 83px;
+    padding: 20px;
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    flex-shrink: 0;
+}
+
+.card p {
+    width: 60px;
+    height: 21px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.card .button {
+    width: 80px;
+    height: 28px;
+    font-size: small;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: center;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #FFF;
+}
+.card .button p{
+    margin-left: 10px;
+    align-items: center;
+}
+
+.card button:hover {
+    background-color: #eee;
+}
+
+.blue {
+    border-radius: 10px;
+    background: #6791FD;  
+}
+
+.green {
+    border-radius: 10px;
+    background: #0EA827;
+}
+
+.olive {
+    border-radius: 10px;
+    background: #626646;
+}
+
+.container{
+    width: 100%;
+    height: 25rem;
+    background-image: url("../");
+    float: left;
+    background-size: cover;
+    background-position: center;
+}
+.dl{
+    width: 100%;
+    height: 25rem;
+    background-color: gray;
+    text-align: center;
+}
+.dl h2{
+    font-size: 20px;
+    padding: 20px;
+}
+.dl p{
+    width: 10rem;
+    height: 2rem;
+    color: white;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 5rem;
+    margin-bottom: 3rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-container, .details-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.form-container h2, .details-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    text-align: center;
+}
+
+.submit-button button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button button:hover {
+    background-color: #218838;
+}
+
+.alert {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 15px;
+    border-radius: 4px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

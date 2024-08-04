@@ -1,0 +1,106 @@
+html, body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation-container {
+    width: 500px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 95%; /* Makes the confirmation container take the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    background: #fff;
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.header h1 {
+    color: red;
+    font-size: 36px;
+    margin: 0;
+}
+
+.confirmation-box {
+    padding: 15px;
+    text-align: left;
+    background-image: url('../pawel-czerwinski-DNC3cXM0lMU-unsplash.jpg');
+    flex-grow: 1; /* Allows the confirmation box to grow and fill the available space */
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.confirmation-box h2 {
+    color: #000;
+    margin: 0 0 10px;
+    font-size: 24px;
+    text-align: center;
+}
+.confirmation-box p {
+    color: #000;
+    font-size: 16px;
+}
+
+.confirmation-box ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 10px;
+}
+.confirmation-box li strong {
+    display: block;
+}
+.confirmation-box .drop p{
+    font-weight: 600;
+    margin-top: 0%;
+}
+.confirmation-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 5px;
+}
+.confirmation-box input {
+    width: 70%;
+    padding: 7px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.confirmation-box button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 2rem;
+    background: red;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.confirmation-box .endPart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation-box button:hover {
+    background: #e60000;
+}
+

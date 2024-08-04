@@ -1,0 +1,105 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="../Registration Page/css/main.css">
+</head>
+<body>
+    <div class="account-container">
+        <div class="header">
+            <h1>theBlood</h1>
+        </div>
+        <div class="account-box">
+            <h2>Create Account</h2>
+            <form>
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <div class="row">
+                    <input type="text" placeholder="Date of Birth" required>
+                    <input type="text" placeholder="Gender" required>
+                </div>
+                <input type="text" placeholder="Register as" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Re-type Password" required>
+                <button type="submit"><a href="../Confirm Page/index.html">Submit</a></button>
+            </form>
+        </div>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h2>Create Account</h2>
+    <form id="registrationForm" action="/register" method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br>
+
+        <label for="registerAs">Register As:</label>
+        <select id="registerAs" name="registerAs" required>
+            <option value="">Select Option</option>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="retypePassword">Retype Password:</label>
+        <input type="password" id="retypePassword" name="retypePassword" required><br>
+
+        <input type="submit" value="Register">
+        <p id="errorMessage" class="error"></p>
+    </form>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            const password = document.getElementById('password').value;
+            const retypePassword = document.getElementById('retypePassword').value;
+            const errorMessage = document.getElementById('errorMessage');
+            const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{7,}$/;
+
+            if (password !== retypePassword) {
+                event.preventDefault();
+                errorMessage.textContent = 'Passwords do not match.';
+                return;
+            }
+
+            if (!passwordPattern.test(password)) {
+                event.preventDefault();
+                errorMessage.textContent = 'Password must be at least 7 characters long, include letters, numbers, and symbols.';
+                return;
+            }
+        });
+    </script>
+</body>
+</html>

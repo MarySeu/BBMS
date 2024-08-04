@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css\main.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="header">
+            <h1>theBlood</h1>
+        </div>
+        <div class="login-box">
+            <h2>WELCOME BACK</h2>
+            <form name="form" action="../phplogin/login.php" method="POST">
+                <input type="text" placeholder="username or email" required>
+                <input type="password" placeholder="password" required>
+                <div class="options">
+                    <label>
+                        <input type="checkbox"> Remember Me
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <div class="btn">
+                    <button type="submit"><a href="">Login</a></button>
+                </div>
+                
+            </form>
+            <p>New User? <a href="../Registration Page/index.html">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- <script>
+        function isvalid(){
+            var user = document.form.user.value;
+            var pass = document.form.pass.value;
+            if(user.length=="" & pass.length==""){
+                alert("Email and password field is empty!!");
+                return false
+            }
+            else{
+                if(user.length==""){
+                alert("Email is empty!!");
+                return false
+                }
+                if(pass.length==""){
+                alert("Password is empty!!");
+                return false
+                }
+            }
+        }
+    </script> -->
+</body>
+</html>

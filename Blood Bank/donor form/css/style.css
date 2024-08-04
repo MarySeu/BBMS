@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+}
+.promo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:red;
+    cursor: pointer;
+    color: white;
+}
+.promo-content{
+    text-align: center;
+}
+.cancel-symbol{
+    text-decoration: none; 
+    color: white;
+    font-size: 20px;
+    vertical-align: middle;
+}
+.cancel-symbol:hover{
+    cursor: pointer;
+}
+
+nav{
+    background: white;
+    width: 100%;
+    padding: 8px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 0.3px solid red;
+}
+.logo{
+    color: red;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+nav ul li{
+    margin: 2px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+nav ul li a{
+    color: black;;
+    padding: 10px 20px;
+    /* text-transform: uppercase; */
+    letter-spacing: 1.2;
+    cursor: pointer;
+}
+
+.nav i {
+    /* font-size: 20px; */
+    margin-left: 10px;
+}
+
+.form-container, .details-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 10px;
+    /* box-sizing: content-box; */
+    float: left;
+    margin-left: 5rem;
+}
+
+.form-container h2, .details-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container label, .details-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-container input, .form-container select,
+.details-container input, .details-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    text-align: center;
+}
+
+.submit-button button, .details-container button{
+    background-color: rgb(231, 29, 29);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button button:hover {
+    background-color: red;
+}
+    
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

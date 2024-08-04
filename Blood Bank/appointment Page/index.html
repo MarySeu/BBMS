@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBMS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="./images/fav.PNG" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <header>
+        <div class="promo">
+            <section class="promo-content">
+                O- blood needed. Please Click on the Donate button Now!! <a href="#" class="cancel-symbol">&times;</a>
+            </section>
+            
+        </div>
+
+        <!-- navigation -->
+        <nav class="nav-bar">
+            <a href="a" class="logo">theBlood</a>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="a">About Us</a></li>
+                <li><a href="../Blood Bank/appointment Page/index.html">Appointment</a>
+                <li><a href="a">Our Stories</a></li>
+                <li><a href="../Hospitals/index.html">Nearby Hospitals</a></li>
+                <li><a href="#"><i class="fas fa-bell"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="announcement">
+        <p>Our working hours are Monday to Friday, from 9 AM to 8 PM.</p>
+    </div>
+
+    <div class="container">
+        <h1>Schedule Your Appointment</h1>
+        <form id="appointmentForm" method="post" action="submit-appointment.php">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="dName" name="name" required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required pattern="\d{10}" maxlength="10" title="Enter a 10-digit phone number">
+            </div>
+            <div class="form-group">
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name='date' required>
+            </div>
+            <div class="form-group">
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name='time' required>
+            </div>
+            <button type="submit" class="submit-btn">Schedule Appointment</button>
+        </form>
+
+        <div id="alert" class="alert" style="display: none;">
+            Your appointment has been scheduled successfully!
+        </div>
+    </div>
+</body>
+
+<script src="../appointment Page/scripts/main.js" defer></script>
+</html>
