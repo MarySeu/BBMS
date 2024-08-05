@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank & Donor Management System</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+            <div id="sidebar-wrapper" class="sidebar">
+                <div class="sidebar-heading text-white display-4 p-3">theBlood</div>
+                <!-- Sidebar content here -->
+                <ul class="nav">
+                    <li class="list-group-item bg-dark">
+                        <a href="#" class="text-white" onclick="showSection('dashboard')">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blood Group</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Donor List</a>
+                    </li>
+                    <li class="list-group-item bg-dark">
+                        <a href="#" class="text-white" onclick="showSection('sendNotification')">Send Notification</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Request Received</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+    
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="btn btn-danger" id="menu-toggle">Home</button>
+
+                <div class="ml-auto">
+                    <a class="nav-link" href="#">Admin</a>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                <h1 class="mt-4">Dashboard</h1>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card text-white bg-primary">
+                            <div class="card-body">
+                                <h5 class="card-title">6</h5>
+                                <p class="card-text">Listed Blood Groups</p>
+                                <a href="#" class="btn btn-light">Full Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card text-white bg-success">
+                            <div class="card-body">
+                                <h5 class="card-title">9</h5>
+                                <p class="card-text">Registered Blood Group</p>
+                                <a href="#" class="btn btn-light">Full Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card text-white bg-primary">
+                            <div class="card-body">
+                                <h5 class="card-title">0</h5>
+                                <p class="card-text">Total Queries</p>
+                                <a href="#" class="btn btn-light">Full Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card text-white bg-olive">
+                            <div class="card-body">
+                                <h5 class="card-title">5</h5>
+                                <p class="card-text">Total Blood Request Received</p>
+                                <a href="#" class="btn btn-light">Full Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Donors List Section -->
+                <div class="donors-list mt-5">
+                    <h2 class="mb-4">Donors List</h2>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search donors..." id="searchInput" oninput="searchDonors()">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Search</button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Phone No</th>
+                                    <th>Email</th>
+                                    <th>Gender</th>
+                                    <th>Blood Group</th>
+                                    <th>City</th>
+                                </tr>
+                            </thead>
+                            <tbody id="donorTable">
+                                <!-- Donor entries will be populated here via JavaScript -->
+                            </tbody>
+                        </table>
+                        <div class="pagination-controls">
+                            <button id="prevButton" class="btn btn-secondary">Previous</button>
+                            <button id="nextButton" class="btn btn-secondary">Next</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary mt-3" id="viewMoreBtn" onclick="viewMore()">View More</button>
+                </div>
+                <!-- End of Donors List Section -->
+
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <div id="sendNotification" class="content-section" style="display: none;">
+        <h2 class="mt-4">Send Notification</h2>
+        <form id="notificationForm">
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="heading">Heading</label>
+                    <input type="text" class="form-control" id="heading" placeholder="Enter heading" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="bloodGroupRequired">Blood Group Required</label>
+                    <select class="form-control" id="bloodGroupRequired" required>
+                        <option value="">Select Blood Group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="button" class="btn btn-danger" id="sendNotificationButton">Send Notification</button>
+        </form>
+
+        <!-- Display Notification Preview -->
+        <div id="notificationPreview" class="mt-4" style="display: none;">
+            <h4>Notification Preview</h4>
+            <div class="border p-3">
+                <p><strong>Heading:</strong> <span id="previewHeading"></span></p>
+                <p><strong>Blood Group Required:</strong> <span id="previewBloodGroup"></span></p>
+                <p><strong>Message:</strong> <span id="previewMessage"></span></p>
+                <button class="btn btn-warning" id="editNotification">Edit Notification</button>
+                <button class="btn btn-success" id="confirmNotification">Confirm & Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./script/main.js" defer></script>
+</body>
+</html>

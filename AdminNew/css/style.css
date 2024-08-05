@@ -1,0 +1,126 @@
+body {
+    overflow-x: hidden;
+}
+
+#wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full height of viewport */
+    width: 200px; /* Adjust width as needed */
+    background-color: #343a40; /* Dark background for sidebar */
+    color: white;
+    overflow-y: auto; /* Allows scrolling within the sidebar if needed */
+    z-index: 1000; /* Ensure it's on top */
+    padding-top: 20px; /* Space for header */
+    text-decoration: none;
+}
+.nav-link {
+    display: block;
+    color: white; /* White text for navigation links */
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    padding-left: 200px;
+}
+
+.sidebar-heading {
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #343a40; /* Dark background for logo area */
+}
+.bg-olive {
+    background-color: olive;
+}
+
+.card {
+    border: none; /* Optional: remove card border */
+    border-radius: 8px; /* Optional: add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+}
+
+.table-responsive {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+input#searchInput {
+    width: 100%;
+}
+
+.table thead th {
+    position: sticky;
+    top: 0;
+    background: #f8f9fa;
+}
+
+.table-responsive::-webkit-scrollbar {
+    width: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+#viewMoreBtn{
+    background-color: red;
+    color: white
+}
+
+.content-section{
+    margin-left: 220px;
+}
+
+.list-group-item {
+    border: none;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+/* #page-content-wrapper {
+    flex-grow: 1;
+    padding: 20px;
+} */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
+.border {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+#notificationPreview h4 {
+    margin-bottom: 1rem;
+}
