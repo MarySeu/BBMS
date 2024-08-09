@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid red;
+    margin-bottom: 10px;
+}
+.promo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:red;
+    cursor: pointer;
+    color: white;
+}
+.promo-content{
+    text-align: center;
+}
+.close-btn{
+    text-decoration: none; 
+    color: white;
+    font-size: 20px;
+    vertical-align: middle;
+}
+.close-btn:hover{
+    cursor: pointer;
+}
+
+nav{
+    background: white;
+    width: 100%;
+    padding: 8px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    color: red;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+nav ul li{
+    margin: 2px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+nav ul li a{
+    color: black;;
+    padding: 10px 20px;
+    /* text-transform: uppercase; */
+    letter-spacing: 1.2;
+    cursor: pointer;
+}
+
+.nav i {
+    /* font-size: 20px; */
+    margin-left: 10px;
+}
+
+.container {
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.title {
+    background-color: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    margin: 0;
+}
+
+.compatibility-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.compatibility-table th, .compatibility-table td {
+    padding: 12px;
+    text-align: left;
+}
+
+.compatibility-table th {
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+}
+
+.compatibility-table tr:nth-child(even) {
+    background-color: #fff8f0;
+}
+
+.compatibility-table tr:nth-child(odd) {
+    background-color: #fdfdfd;
+}
